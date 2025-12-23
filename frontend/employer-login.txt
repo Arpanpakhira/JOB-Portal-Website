@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employer Login - JobPortal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-body">
+
+<div class="auth-container">
+  <h2>Employer Login</h2>
+  <p class="muted">Manage your job postings</p>
+
+  <form class="auth-form">
+    <label>Email</label>
+    <input type="email" placeholder="Enter email">
+
+    <label>Password</label>
+    <input type="password" placeholder="Enter password">
+
+    <button class="btn btn-primary full-btn">Login</button>
+  </form>
+
+  <p class="auth-switch">
+    New Employer? <a href="employer-signup.html">Create Account</a>
+  </p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listings</title>
+
+    <link rel="stylesheet" href="Listing.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="page-container">
+
+        <h1 class="page-title">Job Listings</h1>
+        <p class="sub-title">Showing 6 jobs</p>
+
+        <div class="main-layout">
+
+            <!-- LEFT FILTER SIDEBAR -->
+            <aside class="filter-box">
+                <h2 class="filter-title">Filters</h2>
+
+                <label>Search</label>
+                <input type="text" placeholder="Job Title">
+
+                <label>Job Type</label>
+                <div class="check-group">
+                    <label><input type="checkbox"> Full-time</label>
+                    <label><input type="checkbox"> Part-time</label>
+                    <label><input type="checkbox"> Contract</label>
+                    <label><input type="checkbox"> Remote</label>
+                </div>
+
+                <label>Location</label>
+                <input type="text" placeholder="City or State">
+
+                <label>Salary Range: ₹0 – ₹1 lakh</label>
+                <input type="range">
+
+                <label>Experience Level</label>
+                <div class="check-group">
+                    <label><input type="checkbox"> Entry Level</label>
+                    <label><input type="checkbox"> Mid Level</label>
+                    <label><input type="checkbox"> Senior Level</label>
+                </div>
+
+                <button class="apply-btn">Apply Filters</button>
+            </aside>
+
+            <!-- RIGHT CONTENT -->
+            <section class="content-area">
+
+                <!-- TOP BAR -->
+                <div class="top-bar">
+                    <select>
+                        <option>Most Relevant</option>
+                        <option>Newest</option>
+                        <option>Top Salary</option>
+                    </select>
+
+                    <div class="view-icons">
+                        <span class="icon">🔲</span>
+                        <span class="icon">📄</span>
+                    </div>
+                </div>
+
+                <!-- JOB CARDS GRID -->
+                <div class="job-grid">
+
+                    <!-- JOB CARD 1 -->
+                    <div class="job-card">
+                        <img src="Job-Portal-Assets/Assets/Icons/Briefcase Icon.svg" class="job-icon">
+
+                        <div class="job-info">
+                            <h3>Job Title</h3>
+                            <p class="company">Company Name</p>
+
+                            <div class="skill-row">
+                                <span class="skill">Skills</span>
+                                <span class="skill">Skills</span>
+                                <span class="skill">Skills</span>
+                            </div>
+
+                            <p class="location">📍 Secunderabad, India</p>
+                            <p class="salary">$120k – $150k/year</p>
+                        </div>
+
+                        <a href="job-details.html" class="details-btn">View Details</a>
+                    </div>
+
+                    <!-- JOB CARD 2 -->
+                    <div class="job-card">
+                        <img src="Job-Portal-Assets/Assets/Icons/Briefcase Icon.svg" class="job-icon">
+                        <div class="job-info">
+                            <h3>Job Title</h3>
+                            <p class="company">Company Name</p>
+                            <div class="skill-row">
+                                <span class="skill">Skills</span>
+                                <span class="skill">Skills</span>
+                                <span class="skill">Skills</span>
+                            </div>
+                            <p class="location">📍 Secunderabad, India</p>
+                            <p class="salary">$120k – $150k/year</p>
+                        </div>
+
+                        <a href="job-details.html" class="details-btn">View Details</a>
+                    </div>
+
+                    <!-- JOB CARD 3 -->
+                    <div class="job-card">
+                        <img src="Job-Portal-Assets/Assets/Icons/Briefcase Icon.svg" class="job-icon">
+                        <div class="job-info">
+                            <h3>Job Title</h3>
+                            <p class="company">Company Name</p>
+                            <div class="skill-row">
+                                <span class="skill">Skills</span>
+                                <span class="skill">Skills</span>
+                                <span class="skill">Skills</span>
+                            </div>
+                            <p class="location">📍 Secunderabad, India</p>
+                            <p class="salary">$120k – $150k/year</p>
+                        </div>
+
+                        <a href="job-details.html" class="details-btn">View Details</a>
+                    </div>
+
+                    <!-- JOB CARD 4 -->
+                    <div class="job-card">
+                        <img src="Job-Portal-Assets/Assets/Icons/Briefcase Icon.svg" class="job-icon">
+                        <div class="job-info">
+                            <h3>Job Title</h3>
+                            <p class="company">Company Name</p>
+                            <div class="skill-row">
+                                <span class="skill">Skills</span>
+                                <span class="skill">Skills</span>
+                                <span class="skill">Skills</span>
+                            </div>
+                            <p class="location">📍 Secunderabad, India</p>
+                            <p class="salary">$120k – $150k/year</p>
+                        </div>
+
+                        <a href="job-details.html" class="details-btn">View Details</a>
+                    </div>
+
+                    <!-- JOB CARD 5 -->
+                    <div class="job-card">
+                        <img src="Job-Portal-Assets/Assets/Icons/Briefcase Icon.svg" class="job-icon">
+                        <div class="job-info">
+                            <h3>Job Title</h3>
+                            <p class="company">Company Name</p>
+                            <div class="skill-row">
+                                <span class="skill">Skills</span>
+                                <span class="skill">Skills</span>
+                                <span class="skill">Skills</span>
+                            </div>
+                            <p class="location">📍 Secunderabad, India</p>
+                            <p class="salary">$120k – $150k/year</p>
+                        </div>
+
+                        <a href="job-details.html" class="details-btn">View Details</a>
+                    </div>
+
+                    <!-- JOB CARD 6 -->
+                    <div class="job-card">
+                        <img src="Job-Portal-Assets/Assets/Icons/Briefcase Icon.svg" class="job-icon">
+                        <div class="job-info">
+                            <h3>Job Title</h3>
+                            <p class="company">Company Name</p>
+                            <div class="skill-row">
+                                <span class="skill">Skills</span>
+                                <span class="skill">Skills</span>
+                                <span class="skill">Skills</span>
+                            </div>
+                            <p class="location">📍 Secunderabad, India</p>
+                            <p class="salary">$120k – $150k/year</p>
+                        </div>
+
+                        <a href="job-details.html" class="details-btn">View Details</a>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

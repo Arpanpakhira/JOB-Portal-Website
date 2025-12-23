@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Employer Login | JobPortal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      width: 100vw;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+
+    /* LEFT */
+    .left {
+      width: 50%;
+      background: linear-gradient(180deg, #2ecc71, #27ae60);
+      padding: 50px;
+      color: #fff;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      margin-bottom: 40px;
+    }
+
+    .left h1 {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .left p {
+      font-size: 14px;
+      max-width: 420px;
+      line-height: 1.7;
+    }
+
+    .image-box {
+      margin-top: 50px;
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      width: 85%;
+    }
+
+    .image-box img {
+      width: 100%;
+      display: block;
+    }
+
+    /* RIGHT */
+    .right {
+      width: 50%;
+      background: #f7f7f7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card {
+      background: #fff;
+      width: 400px;
+      padding: 32px;
+      border-radius: 14px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header h2 {
+      font-size: 22px;
+    }
+
+    .header-icons i {
+      margin-left: 10px;
+      cursor: pointer;
+      color: #666;
+      padding: 6px;
+      border-radius: 6px;
+    }
+
+    .header-icons i:hover {
+      background: #eaeaea;
+    }
+
+    .sub {
+      font-size: 13px;
+      color: #777;
+      margin: 10px 0 20px;
+    }
+
+    label {
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    input {
+      width: 100%;
+      padding: 11px;
+      margin: 6px 0 14px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 13px;
+    }
+
+    .row {
+      display: flex;
+      gap: 10px;
+    }
+
+    .password {
+      position: relative;
+    }
+
+    .password i {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      background: #2ecc71;
+      border: none;
+      color: #fff;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .options {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      margin-bottom: 15px;
+    }
+
+    .options a {
+      color: #27ae60;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .divider {
+      text-align: center;
+      font-size: 12px;
+      color: #999;
+      margin: 18px 0;
+    }
+
+    .social {
+      display: flex;
+      gap: 10px;
+    }
+
+    .social button {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ddd;
+      background: #fff;
+      border-radius: 6px;
+    }
+
+    .switch {
+      text-align: center;
+      font-size: 12px;
+      margin-top: 14px;
+    }
+
+    .switch a {
+      color: #27ae60;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    @media(max-width:900px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .left,
+      .right {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- LEFT -->
+    <div class="left">
+      <div class="logo"><i class="fa-solid fa-briefcase"></i> JobPortal</div>
+      <h1>Start Hiring Today</h1>
+      <p>Create your employer account and connect with talented professionals.</p>
+      <div class="image-box">
+        <img src="Assets/Images/signup-image.jpg" alt="Signup Image">
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right">
+
+      <!-- LOGIN -->
+      <div class="card" id="loginCard">
+        <div class="header">
+          <h2>Employer Login</h2>
+          <div class="header-icons">
+            <i class="fa-regular fa-user" onclick="goJobSeeker()"></i>
+            <i class="fa-solid fa-building"></i>
+          </div>
+        </div>
+
+        <p class="sub">Access your employer dashboard</p>
+
+        <label>Email</label>
+        <input type="email" placeholder="company@example.com">
+
+        <label>Password</label>
+        <div class="password">
+          <input type="password" id="loginPass">
+          <i class="fa-regular fa-eye" onclick="toggle('loginPass')"></i>
+        </div>
+
+        <div class="options">
+          <label><input type="checkbox"> Remember me</label>
+          <a onclick="showForgot()">Forgot Password?</a>
+        </div>
+
+        <button class="btn">Login</button>
+
+        <div class="divider">Or continue with</div>
+
+        <div class="social">
+          <button>Google</button>
+          <button>Facebook</button>
+        </div>
+
+        <div class="switch">
+          Don’t have an account?
+          <a onclick="showSignup()">Sign up</a>
+        </div>
+      </div>
+
+      <!-- SIGNUP -->
+      <div class="card hidden" id="signupCard">
+        <h2>Create Account</h2>
+        <p class="sub">Create your employer account</p>
+
+        <input placeholder="Company Name">
+        <div class="row">
+          <input placeholder="First Name">
+          <input placeholder="Last Name">
+        </div>
+        <input placeholder="Email">
+        <input placeholder="Password">
+        <input placeholder="Confirm Password">
+
+        <button class="btn">Create Employer Account</button>
+
+        <div class="switch">
+          Already have an account?
+          <a onclick="showLogin()">Login</a>
+        </div>
+      </div>
+
+      <!-- FORGOT PASSWORD -->
+      <div class="card hidden" id="forgotCard">
+        <h2>Forgot Password</h2>
+        <p class="sub">Enter your email to reset password</p>
+
+        <label>Email Address</label>
+        <input type="email" placeholder="company@example.com">
+
+        <button class="btn">Send Reset Link</button>
+
+        <div class="switch">
+          Remembered password?
+          <a onclick="showLogin()">Login</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    function goJobSeeker() {
+      window.location.href = "JobseekerLogin.html";
+    }
+    function showSignup() {
+      hideAll(); signupCard.classList.remove("hidden");
+    }
+    function showLogin() {
+      hideAll(); loginCard.classList.remove("hidden");
+    }
+    function showForgot() {
+      hideAll(); forgotCard.classList.remove("hidden");
+    }
+    function hideAll() {
+      loginCard.classList.add("hidden");
+      signupCard.classList.add("hidden");
+      forgotCard.classList.add("hidden");
+    }
+    function toggle(id) {
+      const el = document.getElementById(id);
+      el.type = el.type === "password" ? "text" : "password";
+    }
+  </script>
+
+</body>
+
+</html>

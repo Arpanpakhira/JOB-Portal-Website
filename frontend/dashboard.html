@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employer Dashboard • JobPortal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="dashstyle.css">
+</head>
+
+<body>
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <img src="Job-Portal-Assets/Assets/Icons/Briefcase Icon.svg">
+            <span>JobPortal</span>
+        </div>
+
+        <a class="sidebar-btn primary">
+            <img src="Job-Portal-Assets/Assets/Icons/Add Icon.svg" class="icon">
+            Post New Job
+        </a>
+
+        <nav class="nav-links">
+            <a class="active"><img src="Job-Portal-Assets/Assets/Icons/Dashboard Icon.svg" class="icon"> Dashboard</a>
+            <a><img src="Job-Portal-Assets/Assets/Icons/Briefcase Icon.svg" class="icon"> Posted Jobs</a>
+            <a><img src="Job-Portal-Assets/Assets/Icons/Job Seeker Icon.svg" class="icon"> Applications</a>
+            <a><img src="Job-Portal-Assets/Assets/Icons/Company Icon.svg" class="icon"> Company Profile</a>
+        </nav>
+
+        <div class="logout">
+            <img src="Job-Portal-Assets/Assets/Icons/Logout Icon.svg" class="icon">
+            Logout
+        </div>
+
+    </aside>
+
+
+
+    <!-- ================= MAIN ================= -->
+    <main class="main">
+
+        <!-- Header -->
+        <header class="header">
+            <input type="text" placeholder="Search candidates..." class="search">
+            <button class="blue-btn">Post New Job</button>
+
+            <div class="profile">
+                <span>TechCorp Inc.</span><br>
+                <small>Employer</small>
+            </div>
+        </header>
+
+        <h1 class="welcome">Welcome back, TechCorp! 👋</h1>
+        <p class="subtitle">Here’s an overview of your recruitment activity.</p>
+
+
+        <!-- Stats -->
+        <div class="stats-grid">
+
+            <div class="card">
+                <img src="Job-Portal-Assets/Assets/Icons/Document Icon.svg" class="icon-img">
+                <h3>24</h3>
+                <p>Posted Jobs</p>
+                <small>+2 this month</small>
+            </div>
+
+            <div class="card">
+                <img src="Job-Portal-Assets/Assets/Icons/Application Icon.svg" class="icon-img">
+                <h3>18</h3>
+                <p>Total Applications</p>
+                <small>+45 this week</small>
+            </div>
+
+            <div class="card">
+                <img src="Job-Portal-Assets/Assets/Icons/Briefcase Icon.svg" class="icon-img">
+                <h3>156</h3>
+                <p>Active Jobs</p>
+                <small>4 expiring soon</small>
+            </div>
+
+            <div class="card">
+                <img src="Job-Portal-Assets/Assets/Icons/Rocket Icon.svg" class="icon-img">
+                <h3>32</h3>
+                <p>Profile Views</p>
+                <small>+18% this month</small>
+            </div>
+
+        </div>
+
+
+
+        <!-- Posted Jobs -->
+        <div class="table-card">
+            <div class="table-title">
+                <h2>Posted Jobs</h2>
+                <button class="view">View All</button>
+            </div>
+
+            <table>
+                <tr>
+                    <th>Position</th>
+                    <th>Posted</th>
+                    <th>Applicants</th>
+                    <th>Status</th>
+                </tr>
+
+                <tr>
+                    <td>Senior React Developer</td>
+                    <td>5 days ago</td>
+                    <td>45</td>
+                    <td><span class="status active">Active</span></td>
+                </tr>
+
+                <tr>
+                    <td>Frontend Engineer</td>
+                    <td>3 days ago</td>
+                    <td>32</td>
+                    <td><span class="status closed">Closed</span></td>
+                </tr>
+
+                <tr>
+                    <td>Product Designer</td>
+                    <td>1 week ago</td>
+                    <td>28</td>
+                    <td><span class="status active">Active</span></td>
+                </tr>
+
+                <tr>
+                    <td>UX Researcher</td>
+                    <td>1 month ago</td>
+                    <td>51</td>
+                    <td><span class="status active">Active</span></td>
+                </tr>
+
+            </table>
+        </div>
+
+
+
+        <!-- Recent Applications -->
+        <div class="table-card">
+            <div class="table-title">
+                <h2>Recent Applications</h2>
+                <button class="view">View All</button>
+            </div>
+
+            <table>
+                <tr>
+                    <th>Candidate</th>
+                    <th>Position</th>
+                    <th>Applied Date</th>
+                    <th>Status</th>
+                </tr>
+
+                <tr>
+                    <td>Murtaza Karanji</td>
+                    <td>Senior React Developer</td>
+                    <td>Dec 1, 2025</td>
+                    <td><span class="tag review">Under Review</span></td>
+                </tr>
+
+                <tr>
+                    <td>Sarah Johnson</td>
+                    <td>Frontend Engineer</td>
+                    <td>Nov 28, 2025</td>
+                    <td><span class="tag interview">Interview Scheduled</span></td>
+                </tr>
+
+                <tr>
+                    <td>Michael Chen</td>
+                    <td>Product Designer</td>
+                    <td>Nov 25, 2025</td>
+                    <td><span class="tag shortlist">Shortlisted</span></td>
+                </tr>
+
+                <tr>
+                    <td>Emily Davis</td>
+                    <td>UX Researcher</td>
+                    <td>Nov 25, 2025</td>
+                    <td><span class="tag new">New</span></td>
+                </tr>
+
+            </table>
+        </div>
+
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up • JobPortal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body,
+        html {
+            height: 100%;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Left side */
+        .left {
+            flex: 1;
+            background: linear-gradient(135deg, #34C759, #186C2D);
+            /* Updated gradient colors */
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .left h1 {
+            font-size: 36px;
+            margin: 20px 0 10px;
+        }
+
+        .left p {
+            font-size: 16px;
+            margin-bottom: 30px;
+            max-width: 300px;
+        }
+
+        .left img {
+            width: 80%;
+            border-radius: 12px;
+        }
+
+        /* Right side */
+        .right {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f8f8f8;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            width: 350px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h2 {
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-align: left;
+        }
+
+        .card input[type="text"],
+        .card input[type="email"],
+        .card input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        .password-field {
+            position: relative;
+        }
+
+        .password-field i {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #888;
+        }
+
+        .card button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 10px;
+            background: #007bff;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .card button:hover {
+            opacity: 0.9;
+        }
+
+        .terms {
+            font-size: 13px;
+            margin: 12px 0;
+            text-align: left;
+        }
+
+        .terms a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .social-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+
+        .social-buttons button {
+            flex: 1;
+            margin: 0 5px;
+            padding: 10px 0;
+            font-size: 14px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: white;
+        }
+
+        .social-buttons button.google {
+            color: black;
+        }
+
+        .social-buttons button.facebook {
+            color: #4267B2;
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .login-link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .error {
+            color: red;
+            font-size: 13px;
+            text-align: left;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Left Side -->
+        <div class="left">
+            <h1>Start Your Journey</h1>
+            <p>Create an account to unlock thousands of job opportunities and connect with top employers.</p>
+
+            <img src="Job-Portal-Assets/Assets/Images/signup-image.jpg" alt="Signup Image">
+        </div>
+
+
+        <!-- Right Side -->
+        <div class="right">
+            <div class="card">
+                <h2>Create Account</h2>
+                <div class="error" id="errorBox"></div>
+
+                <input type="text" id="firstName" placeholder="First Name">
+                <input type="text" id="lastName" placeholder="Last Name">
+                <input type="email" id="email" placeholder="Email Address">
+
+                <div class="password-field">
+                    <input type="password" id="password" placeholder="Create a strong Password">
+                    <i class="fa fa-eye" id="togglePass"></i>
+                </div>
+
+                <div class="password-field">
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password">
+                    <i class="fa fa-eye" id="toggleConfirm"></i>
+                </div>
+
+                <div class="terms">
+                    <input type="checkbox" id="terms"> I agree to the
+                    <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+                </div>
+
+                <button onclick="signup()">Create Account</button>
+
+                <div class="social-buttons">
+                    <button class="google"><i class="fab fa-google"></i> Google</button>
+                    <button class="facebook"><i class="fab fa-facebook-f"></i> Facebook</button>
+                </div>
+
+                <div class="login-link">
+                    Already have an account? <a href="login.html">Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="signup.js"></script>
+</body>
+
+</html>

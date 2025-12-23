@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>JobPortal - Find Your Dream Job</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner" style="display: flex; align-items: center; justify-content: space-between;">
+      <div class="logo" style="display: flex; align-items: center; gap: 8px;">
+        <img src="Job-Portal-Assets/Assets/Icons/Briefcase Icon.svg" alt="Briefcase Icon" style="height:30px;">
+        <span style="font-size: 18px; font-weight: 600;">JobPortal</span>
+      </div>
+      <nav class="main-nav">
+        <a href="#">Find Jobs</a>
+        <a href="#">Verify Certificate</a>
+        <a href="#">For Employers</a>
+      </nav>
+      <div class="auth">
+        <a href="login.html" class="btn btn-ghost">Login</a>
+        <a href="signup.html" class="btn btn-primary">Sign Up</a>
+      </div>
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="container hero-inner">
+
+        <!-- LEFT SIDE TEXT -->
+        <div class="hero-text">
+          <h1>Find Your Dream Job<br>Today</h1>
+
+          <p>Discover thousands of job opportunities from top companies.
+            Your next career move starts here.</p>
+
+          <!-- SEARCH BAR -->
+          <div class="search-bar">
+            <a href="job_listing.html" class="find-btn"
+              style="display:inline-block; text-decoration:none; color:white;">
+              Find Your Job
+            </a>
+
+            <input type="text" placeholder="ex.web developer">
+            <select>
+              <option>Country</option>
+              <option>India</option>
+              <option>USA</option>
+            </select>
+          </div>
+
+          <div class="popular">
+            Popular:
+            <a href="#">Designer</a>
+            <a href="#">Developer</a>
+            <a href="#">Manager</a>
+            <a href="#">Marketing</a>
+          </div>
+        </div>
+
+        <!-- RIGHT SIDE IMAGE -->
+        <div class="hero-image">
+          <img src="Job-Portal-Assets/Assets/Images/hero-image.jpg" alt="">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section style="padding: 40px 0; background: #ffffff;">
+      <div style="
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      text-align: center;
+      max-width: 1200px;
+      margin: auto;
+      gap: 0;
+  ">
+
+        <div style="margin: 0; padding: 0;">
+          <img src="Job-Portal-Assets/Assets/Icons/Company Icon.svg"
+            style="width: 42px; opacity: 0.8; margin-bottom: 8px;">
+          <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 3px; color: #111;">10,000+</h3>
+          <p style="margin: 0; font-size: 14px; color: #666;">Active Jobs</p>
+        </div>
+
+        <div style="margin: 0; padding: 0;">
+          <img src="Job-Portal-Assets/Assets/Icons/Briefcase Icon.svg"
+            style="width: 42px; opacity: 0.8; margin-bottom: 8px;">
+          <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 3px; color: #111;">5,000+</h3>
+          <p style="margin: 0; font-size: 14px; color: #666;">Companies</p>
+        </div>
+
+        <div style="margin: 0; padding: 0;">
+          <img src="Job-Portal-Assets/Assets/Icons/Job Seeker Icon.svg"
+            style="width: 42px; opacity: 0.8; margin-bottom: 8px;">
+          <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 3px; color: #111;">50,000+</h3>
+          <p style="margin: 0; font-size: 14px; color: #666;">Job Seekers</p>
+        </div>
+
+        <div style="margin: 0; padding: 0;">
+          <img src="Job-Portal-Assets/Assets/Icons/Success Rate Icon.svg"
+            style="width: 42px; opacity: 0.8; margin-bottom: 8px;">
+          <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 3px; color: #111;">95%</h3>
+          <p style="margin: 0; font-size: 14px; color: #666;">Success Rate</p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- CATEGORIES -->
+    <section class="categories container">
+      <h2>Browse by Category</h2>
+      <p class="muted">Explore jobs across different industries</p>
+
+      <div class="category-grid">
+        <div class="cat-card">
+          <img src="Job-Portal-Assets/Assets/Icons/Code Icon.svg" class="cat-icon">
+          <h3>Technology</h3>
+          <span class="muted">2,543 jobs</span>
+        </div>
+
+        <div class="cat-card">
+          <img src="Job-Portal-Assets/Assets/Icons/Palette Icon.svg" class="cat-icon">
+          <h3>Design</h3>
+          <span class="muted">2,543 jobs</span>
+        </div>
+
+        <div class="cat-card">
+          <img src="Job-Portal-Assets/Assets/Icons/Bar Chart Icon.svg" class="cat-icon">
+          <h3>Marketing</h3>
+          <span class="muted">2,543 jobs</span>
+        </div>
+
+        <div class="cat-card">
+          <img src="Job-Portal-Assets/Assets/Icons/Heart Icon.svg" class="cat-icon">
+          <h3>Healthcare</h3>
+          <span class="muted">2,543 jobs</span>
+        </div>
+
+        <div class="cat-card">
+          <img src="Job-Portal-Assets/Assets/Icons/Wrench Icon.svg" class="cat-icon">
+          <h3>Engineering</h3>
+          <span class="muted">2,543 jobs</span>
+        </div>
+
+        <div class="cat-card">
+          <img src="Job-Portal-Assets/Assets/Icons/Graduation Cap Icon.svg" class="cat-icon">
+          <h3>Education</h3>
+          <span class="muted">2,543 jobs</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED JOBS -->
+    <section class="featured container">
+      <div class="featured-header">
+        <div>
+          <h2>Featured Jobs</h2>
+          <p class="muted">Hand-picked opportunities from top companies</p>
+        </div>
+
+        <!-- UPDATED: View All Jobs Button -->
+        <a href="job_listing.html" class="view-all-btn">View All Jobs</a>
+      </div>
+
+      <div class="jobs-grid">
+
+        <!-- Job Card 1 -->
+        <div class="job-card">
+          <div class="job-top">
+            <img src="Job-Portal-Assets/Assets/Icons/Briefcase Icon.svg" class="job-icon">
+            <span class="bookmark">🔖</span>
+          </div>
+
+          <h3>Job Title</h3>
+          <p class="company">Company Name</p>
+
+          <div class="skills">
+            <span>Skills</span>
+            <span>Skills</span>
+            <span>Skills</span>
+            <span>Skills</span>
+          </div>
+
+          <div class="location-row">
+            <img src="Job-Portal-Assets/Assets/Icons/Location Icon.svg" class="loc-icon">
+            <p>Secunderabad, India</p>
+          </div>
+
+          <div class="bottom-row">
+            <p class="salary">$120k - $150k/year</p>
+
+            <!-- UPDATED: View Details link -->
+            <a href="job-details.html" class="details-btn">View Details</a>
+          </div>
+        </div>
+
+        <!-- Job Card 2 -->
+        <div class="job-card">
+          <div class="job-top">
+            <img src="Job-Portal-Assets/Assets/Icons/Briefcase Icon.svg" class="job-icon">
+            <span class="bookmark">🔖</span>
+          </div>
+
+          <h3>Job Title</h3>
+          <p class="company">Company Name</p>
+
+          <div class="skills">
+            <span>Skills</span><span>Skills</span><span>Skills</span><span>Skills</span>
+          </div>
+
+          <div class="location-row">
+            <img src="Job-Portal-Assets/Assets/Icons/Location Icon.svg" class="loc-icon">
+            <p>Secunderabad, India</p>
+          </div>
+
+          <div class="bottom-row">
+            <p class="salary">$120k - $150k/year</p>
+
+
+            <a href="job-details.html" class="details-btn">View Details</a>>
+          </div>
+        </div>
+
+        <!-- Job Card 3 -->
+        <div class="job-card">
+          <div class="job-top">
+            <img src="Job-Portal-Assets/Assets/Icons/Briefcase Icon.svg" class="job-icon">
+            <span class="bookmark">🔖</span>
+          </div>
+
+          <h3>Job Title</h3>
+          <p class="company">Company Name</p>
+
+          <div class="skills">
+            <span>Skills</span><span>Skills</span><span>Skills</span><span>Skills</span>
+          </div>
+
+          <div class="location-row">
+            <img src="Job-Portal-Assets/Assets/Icons/Location Icon.svg" class="loc-icon">
+            <p>Secunderabad, India</p>
+          </div>
+
+          <div class="bottom-row">
+            <p class="salary">$120k - $150k/year</p>
+
+            <!-- UPDATED -->
+            <a href="job-details.html" class="details-btn">View Details</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="container cta-inner">
+        <h2>Ready to Get Started?</h2>
+        <p>Join thousands of job seekers and employers who trust JobPortal for their career needs.</p>
+
+        <div class="cta-buttons">
+          <a href="signup.html" class="btn btn-white">Create Account</a>
+          <a href="#" class="btn btn-outline">Post a Job</a>
+        </div>
+      </div>
+    </section>
+
+
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+
+      <!-- Left Section -->
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="https://cdn-icons-png.flaticon.com/128/1041/1041916.png" alt="logo">
+          <span>JobPortal</span>
+        </div>
+        <p>Your trusted platform for finding the perfect job and verifying professional certificates.</p>
+
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-x-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <!-- For Job Seekers -->
+      <div class="footer-links">
+        <h4>For Job Seekers</h4>
+        <a href="#">Browse Jobs</a>
+        <a href="#">My Dashboard</a>
+        <a href="#">Create Account</a>
+        <a href="#">Career Advice</a>
+      </div>
+
+      <!-- For Employers -->
+      <div class="footer-links">
+        <h4>For Employers</h4>
+        <a href="#">Post a Job</a>
+        <a href="#">Browse Candidates</a>
+        <a href="#">Pricing Plans</a>
+        <a href="#">Verify Certificates</a>
+      </div>
+
+      <!-- Company -->
+      <div class="footer-links">
+        <h4>Company</h4>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Services</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 JobPortal. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- FONT AWESOME ICONS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>

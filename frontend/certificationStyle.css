@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+.main {
+    background-color: #b9ebe6;
+    text-align: center;
+    margin: 0px;
+
+}
+
+.certificate {
+    background-color: white;
+    margin: 40px;
+    border-radius: 20px;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    padding: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+.mid {
+    background-color: white;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    border-radius: 15px;
+    padding-top: 15px;
+    height: 100px;
+    margin-bottom: 30px;
+
+}
+
+.cards {
+    background-color: white;
+    margin: 25px;
+    border-radius: 10px;
+    padding-top: 20px;
+    width: 25vw;
+}
+
+.img {
+    height: 80px;
+    border-radius: 10px;
+}
+
+.bottom {
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+.why {
+    margin-bottom: 20px;
+}
+
+.btn {
+    margin-left: 50px;
+}

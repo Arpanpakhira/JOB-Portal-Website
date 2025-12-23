@@ -1,0 +1,256 @@
+/* GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #f5f7fb;
+    display: flex;
+}
+
+/* ===================== SIDEBAR ===================== */
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background: #ffffff;
+    border-right: 1px solid #e5e7eb;
+    padding: 28px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+/* LOGO */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 35px;
+}
+
+.logo img {
+    width: 40px;
+}
+
+.logo span {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* POST JOB BUTTON */
+.sidebar-btn.primary {
+    background: #007bff;
+    color: #fff;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.icon {
+    width: 20px;
+}
+
+/* NAV LINKS */
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav-links a {
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    color: #4b4b4b;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.nav-links a.active {
+    background: #e7f1ff;
+    color: #007bff;
+    font-weight: 600;
+}
+
+/* LOGOUT */
+.logout {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    cursor: pointer;
+    color: #d9534f;
+    font-weight: 500;
+}
+
+
+/* ===================== MAIN ===================== */
+.main {
+    margin-left: 290px;
+    padding: 35px 40px;
+    width: calc(100% - 290px);
+}
+
+/* Header */
+.header {
+    background: white;
+    padding: 14px 25px;
+    border-radius: 14px;
+    border: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.search {
+    width: 50%;
+    padding: 11px 16px;
+    border: 1px solid #d3d3d3;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.blue-btn {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 11px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.welcome {
+    font-size: 28px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* ===================== STATS ===================== */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.card {
+    background: white;
+    padding: 22px;
+    border-radius: 14px;
+    border: 1px solid #e5e7eb;
+    text-align: left;
+}
+
+.card img {
+    width: 36px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+
+.card small {
+    color: #777;
+    font-size: 13px;
+}
+
+/* ===================== TABLES ===================== */
+.table-card {
+    margin-top: 35px;
+    background: white;
+    padding: 28px;
+    border-radius: 14px;
+    border: 1px solid #e5e7eb;
+}
+
+.table-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.table-title h2 {
+    font-size: 20px;
+}
+
+.view {
+    background: #eef1f7;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    color: #777;
+    font-size: 14px;
+    padding-bottom: 14px;
+    font-weight: 500;
+}
+
+td {
+    padding: 16px 0;
+    border-top: 1px solid #eeeeee;
+    font-size: 15px;
+}
+
+/* Status Badges */
+.status,
+.tag {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    color: white;
+}
+
+.status.active {
+    background: #3ac27c;
+}
+
+.status.closed {
+    background: #9ca3af;
+}
+
+.tag.review {
+    background: #f6ad55;
+}
+
+.tag.interview {
+    background: #4f46e5;
+}
+
+.tag.shortlist {
+    background: #ec4899;
+}
+
+.tag.new {
+    background: #10b981;
+}

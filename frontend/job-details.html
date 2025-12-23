@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Details</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #f5f7fa;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* LEFT SIDE */
+        .left {
+            flex: 1;
+            min-width: 600px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+        }
+
+        .top-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        .title {
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .title h2 {
+            font-size: 26px;
+            font-weight: 600;
+        }
+
+        .title p {
+            color: #555;
+            font-size: 14px;
+            margin-top: 3px;
+        }
+
+        .chips {
+            display: flex;
+            gap: 10px;
+            margin-top: 8px;
+        }
+
+        .chip {
+            background: #e9f3ff;
+            color: #0066ff;
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .icons img {
+            width: 22px;
+            cursor: pointer;
+        }
+
+        /* INFO BOXES */
+        .info-box {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .info {
+            flex: 1;
+            min-width: 150px;
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .info img {
+            width: 28px;
+        }
+
+        .info b {
+            font-weight: 500;
+        }
+
+        h3 {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 6px;
+            color: #555;
+            font-size: 14px;
+        }
+
+        /* FOOTER INFO */
+        .footer-info {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-box {
+            flex: 1;
+            min-width: 150px;
+            background: #f8fafc;
+            padding: 12px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .footer-box img {
+            width: 26px;
+        }
+
+        .footer-box span {
+            font-size: 13px;
+            color: #555;
+        }
+
+        /* RIGHT SIDE */
+        .right {
+            width: 300px;
+            min-width: 280px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .apply-btn {
+            width: 100%;
+            background: #0066ff;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .save-btn {
+            width: 100%;
+            background: #fff;
+            border: 1px solid #dce1e7;
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .summary-list {
+            margin-top: 15px;
+        }
+
+        .summary-list div {
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .share-icons {
+            display: flex;
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .share-icons img {
+            width: 22px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- LEFT CONTENT -->
+        <div class="left">
+
+            <!-- JOB HEADER -->
+            <div class="card">
+                <div class="top-header">
+                    <div class="title">
+                        <img src="Job-Portal-Assets/Assets/Icons/Briefcase Icon.svg" width="45">
+                        <div>
+                            <h2>Job Title</h2>
+                            <p>Company Name</p>
+                            <div class="chips">
+                                <div class="chip">Full-time</div>
+                                <div class="chip">Remote</div>
+                                <div class="chip">3-5 Years</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="icons">
+                        <img src="Job-Portal-Assets/Assets/Icons/Save Icon.svg">
+                        <img src="Job-Portal-Assets/Assets/Icons/Share Icon.svg">
+                    </div>
+                </div>
+                <div class="info-box">
+                    <div class="info">
+                        <img src="Job-Portal-Assets/Assets/Icons/Salary Icon.svg">
+                        <div>
+                            <b>Salary</b><br>
+                            ₹3 lakh - ₹5 lakh
+                        </div>
+                    </div>
+                    <div class="info">
+                        <img src="Job-Portal-Assets/Assets/Icons/Location Icon.svg">
+                        <div>
+                            <b>Location</b><br>
+                            Secunderabad, India
+                        </div>
+                    </div>
+                    <div class="info">
+                        <img src="Job-Portal-Assets/Assets/Icons/Experience Icon.svg">
+                        <div>
+                            <b>Experience</b><br>
+                            3-5 Years
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- JOB DESCRIPTION -->
+            <div class="card">
+                <h3>Job Description</h3>
+                <p>
+                    We are looking for an experienced Senior React Developer to join our engineering team...
+                </p>
+            </div>
+
+            <!-- RESPONSIBILITIES -->
+            <div class="card">
+                <h3>Key Responsibilities</h3>
+                <ul>
+                    <li>Design and implement robust, scalable React applications</li>
+                    <li>Collaborate with cross-functional teams to define and ship new features</li>
+                    <li>Write clean, maintainable code following best practices</li>
+                    <li>Mentor junior developers and conduct code reviews</li>
+                    <li>Optimize applications for maximum performance and scalability</li>
+                    <li>Stay up-to-date with emerging technologies and industry trends</li>
+                </ul>
+            </div>
+
+            <!-- REQUIREMENTS -->
+            <div class="card">
+                <h3>Requirements</h3>
+                <ul>
+                    <li>3–5 years of professional experience with React and TypeScript</li>
+                    <li>Strong understanding of modern JavaScript (ES6+)</li>
+                    <li>Experience with state management libraries (Redux, MobX, or similar)</li>
+                    <li>Proficiency in HTML5, CSS3, and responsive design principles</li>
+                    <li>Experience with RESTful APIs and modern build tools</li>
+                    <li>Excellent problem-solving and communication skills</li>
+                </ul>
+            </div>
+
+            <!-- COMPANY FOOTER INFO -->
+            <div class="card footer-info">
+                <div class="footer-box">
+                    <img src="Job-Portal-Assets/Assets/Icons/Company Icon.svg">
+                    <div>
+                        Industry<br><span>Technology</span>
+                    </div>
+                </div>
+                <div class="footer-box">
+                    <img src="Job-Portal-Assets/Assets/Icons/Job Seeker Icon.svg">
+                    <div>
+                        Company Size<br><span>500 - 1000</span>
+                    </div>
+                </div>
+                <div class="footer-box">
+                    <img src="Job-Portal-Assets/Assets/Icons/Company Icon.svg">
+                    <div>
+                        Founded<br><span>2013</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDEBAR -->
+        <div class="right">
+            <div class="card">
+                <button class="apply-btn">Apply Now</button>
+                <button class="save-btn">Save Job</button>
+
+                <h3 style="margin-top:20px;">Job Summary</h3>
+                <div class="summary-list">
+                    <div><b>Date Posted:</b> December 5, 2025</div>
+                    <div><b>Expiration:</b> January 1, 2026</div>
+                    <div><b>Job Type:</b> Full-time</div>
+                    <div><b>Mode:</b> Remote</div>
+                    <div><b>Salary:</b> $120,000 - $150,000</div>
+                    <div><b>Experience:</b> 3–5 years</div>
+                    <div><b>Location:</b> San Francisco, CA</div>
+                </div>
+
+                <h3 style="margin-top:25px;">Share this job</h3>
+                <div class="share-icons">
+                    <img src="Job-Portal-Assets/Assets/Icons/Link Icon.svg">
+                    <img src="Job-Portal-Assets/Assets/Icons/Share Icon.svg">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

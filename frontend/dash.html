@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Job Portal Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif
+        }
+
+        body {
+            background: #f5f6fa;
+            color: #111
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 240px;
+            background: #fff;
+            border-right: 1px solid #eee;
+            padding: 20px;
+            display: flex;
+            flex-direction: column
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 20px;
+            color: #2563eb;
+            margin-bottom: 30px
+        }
+
+        .menu a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 14px;
+            border-radius: 8px;
+            color: #444;
+            text-decoration: none;
+            margin-bottom: 6px
+        }
+
+        .menu a.active,
+        .menu a:hover {
+            background: #eef4ff;
+            color: #2563eb
+        }
+
+        .logout {
+            margin-top: auto;
+            color: #ef4444;
+            text-decoration: none;
+            padding: 12px
+        }
+
+        /* Main */
+        .main {
+            flex: 1;
+            padding: 24px
+        }
+
+        /* Top bar */
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px
+        }
+
+        .search {
+            width: 420px;
+            padding: 10px 14px;
+            border: 1px solid #ddd;
+            border-radius: 10px
+        }
+
+        .user {
+            display: flex;
+            align-items: center;
+            gap: 12px
+        }
+
+        .avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: #ddd
+        }
+
+        /* Welcome */
+        .welcome {
+            margin-bottom: 24px
+        }
+
+        .welcome h2 {
+            font-size: 26px;
+            font-weight: 700
+        }
+
+        .welcome p {
+            color: #666;
+            margin-top: 4px
+        }
+
+        /* Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 28px
+        }
+
+        .stat {
+            background: #fff;
+            padding: 18px;
+            border-radius: 14px;
+            border: 1px solid #eee
+        }
+
+        .stat h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 6px
+        }
+
+        .stat span {
+            color: #666;
+            font-size: 14px
+        }
+
+        /* Card */
+        .card {
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 14px;
+            padding: 18px;
+            margin-bottom: 28px
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px
+        }
+
+        .card-header h3 {
+            font-size: 18px;
+            font-weight: 600
+        }
+
+        .btn {
+            padding: 8px 14px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            background: #f9fafb;
+            cursor: pointer
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 12px 8px;
+            font-size: 14px
+        }
+
+        th {
+            color: #666;
+            font-weight: 500;
+            border-bottom: 1px solid #eee
+        }
+
+        td {
+            border-bottom: 1px solid #f1f1f1
+        }
+
+        .status {
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500
+        }
+
+        .review {
+            background: #fef3c7;
+            color: #b45309
+        }
+
+        .interview {
+            background: #e0e7ff;
+            color: #3730a3
+        }
+
+        .rejected {
+            background: #fee2e2;
+            color: #b91c1c
+        }
+
+        .accepted {
+            background: #dcfce7;
+            color: #15803d
+        }
+
+        /* Jobs */
+        .jobs {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px
+        }
+
+        .job {
+            border: 1px solid #eee;
+            border-radius: 14px;
+            padding: 18px
+        }
+
+        .job h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            display: inline-block;
+        }
+
+        .job p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px
+        }
+
+        .tags span {
+            font-size: 12px;
+            background: #f1f5f9;
+            padding: 4px 8px;
+            border-radius: 6px;
+            margin-right: 6px
+        }
+
+        .salary {
+            margin: 12px 0;
+            font-weight: 600
+        }
+
+        .apply {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            background: #2563eb;
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer
+        }
+
+        @media(max-width:1100px) {
+            .stats {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .jobs {
+                grid-template-columns: 1fr
+            }
+
+            .search {
+                width: 260px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">JobPortal</div>
+            <nav class="menu">
+                <a class="active" href="#">Dashboard</a>
+                <a href="#">Applied Jobs</a>
+                <a href="#">Saved Jobs</a>
+                <a href="#">Browse Jobs</a>
+            </nav>
+            <a class="logout" href="#">Logout</a>
+        </aside>
+
+        <!-- Main -->
+        <main class="main">
+            <div class="topbar">
+                <input class="search" placeholder="Search jobs" />
+                <div class="user">
+                    <span>John Doe<br><small>Job Seeker</small></span>
+                    <div class="avatar"></div>
+                </div>
+            </div>
+
+            <div class="welcome">
+                <h2>Welcome back, John! 👋</h2>
+                <p>Here's what's happening with your job search today.</p>
+            </div>
+
+            <!-- Stats -->
+            <section class="stats">
+                <div class="stat">
+                    <h3>74</h3><span>Applied Jobs</span>
+                </div>
+                <div class="stat">
+                    <h3>18</h3><span>Saved Jobs</span>
+                </div>
+                <div class="stat">
+                    <h3>156</h3><span>Profile Views</span>
+                </div>
+                <div class="stat">
+                    <h3>32</h3><span>Recommended</span>
+                </div>
+            </section>
+
+            <!-- Recent Applications -->
+            <section class="card">
+                <div class="card-header">
+                    <h3>Recent Applications</h3>
+                    <button class="btn">View All</button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Position</th>
+                            <th>Company</th>
+                            <th>Applied Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Senior React Developer</td>
+                            <td>TechCorp Inc.</td>
+                            <td>Dec 1, 2025</td>
+                            <td><span class="status review">Under Review</span></td>
+                        </tr>
+                        <tr>
+                            <td>Frontend Engineer</td>
+                            <td>StartupXYZ</td>
+                            <td>Nov 28, 2025</td>
+                            <td><span class="status interview">Interview Scheduled</span></td>
+                        </tr>
+                        <tr>
+                            <td>Product Designer</td>
+                            <td>DesignHub</td>
+                            <td>Nov 25, 2025</td>
+                            <td><span class="status rejected">Rejected</span></td>
+                        </tr>
+                        <tr>
+                            <td>UX Researcher</td>
+                            <td>UserFirst</td>
+                            <td>Nov 25, 2025</td>
+                            <td><span class="status accepted">Accepted</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Recommended Jobs -->
+            <section class="card">
+                <div class="card-header">
+                    <h3>Recommended Jobs</h3>
+                    <button class="btn">See All</button>
+                </div>
+                <div class="jobs">
+                    <div class="job" style="display:flex;flex-direction:column;align-items:center;text-align:center;">
+                        <img src="Job-Portal-Assets/Assets/Icons/Briefcase Icon.svg" alt="Job Icon"
+                            style="width:40px;height:40px;margin-bottom:10px;">
+                        <h4>Frontend Developer</h4>
+                        <p>TechCorp Inc.</p>
+                        <div class="tags"><span>Full-time</span><span>Remote</span></div>
+                        <div class="salary">$120k - $150k/year</div>
+                        <a href="job-details.html"><button class="apply">View Details</button></a>
+                    </div>
+
+                    <div class="job" style="display:flex;flex-direction:column;align-items:center;text-align:center;">
+                        <img src="Job-Portal-Assets/Assets/Icons/Briefcase Icon.svg" alt="Job Icon"
+                            style="width:40px;height:40px;margin-bottom:10px;">
+                        <h4>Backend Engineer</h4>
+                        <p>StartupXYZ</p>
+                        <div class="tags"><span>Full-time</span><span>Remote</span></div>
+                        <div class="salary">$100k - $130k/year</div>
+                        <a href="job-details.html"><button class="apply">View Details</button></a>
+                    </div>
+
+                    <div class="job" style="display:flex;flex-direction:column;align-items:center;text-align:center;">
+                        <img src="Job-Portal-Assets/Assets/Icons/Briefcase Icon.svg" alt="Job Icon"
+                            style="width:40px;height:40px;margin-bottom:10px;">
+                        <h4>UI/UX Designer</h4>
+                        <p>DesignHub</p>
+                        <div class="tags"><span>Full-time</span><span>On-site</span></div>
+                        <div class="salary">$90k - $120k/year</div>
+                        <a href="job-details.html"><button class="apply">View Details</button></a>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>
