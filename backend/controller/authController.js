@@ -22,7 +22,7 @@ export const registerController = async (req, res) => {
             });
         }
 
-        // create user (password auto-hashed by pre save)
+        // create user 
         const user = await User.create({
             name,
             email,
